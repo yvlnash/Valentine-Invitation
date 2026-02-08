@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Invitation</title>
+    <title>Valentine Invitation 💖</title>
 
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #ff9a9e, #fecfef);
-            text-align: center;
-            margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -20,13 +19,13 @@
 
         .card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
             padding: 40px;
+            border-radius: 20px;
+            text-align: center;
             max-width: 500px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 2;
             animation: fadeIn 1.5s ease;
+            z-index: 2;
         }
 
         @keyframes fadeIn {
@@ -82,7 +81,7 @@
         #confirmation {
             color: #e91e63;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         .hearts-bg {
@@ -95,8 +94,8 @@
         .heart-bg {
             position: absolute;
             font-size: 2em;
-            animation: float 6s linear infinite;
             opacity: 0.6;
+            animation: float 6s linear infinite;
         }
 
         @keyframes float {
@@ -111,17 +110,17 @@
 
     <div class="card">
         <div class="heart">❤️</div>
-        <h1>Happy Valentine’s Day!</h1>
-        <p>I made something special just for you 💕</p>
+        <h1>Happy Valentine’s Day! 💕</h1>
+        <p>I made something special just for you</p>
 
         <button onclick="revealInvitation(this)">Reveal Invitation</button>
 
         <div id="invitation">
             <p>
                 Will you be my Valentine?  
-                Let’s have a romantic date together 💖
+                Let’s spend a beautiful Valentines ulit together! 💖
             </p>
-            <p>— Yours truly</p>
+            <p>— Loving bf, Sean</p>
         </div>
 
         <div id="choices">
@@ -130,7 +129,7 @@
         </div>
 
         <div id="confirmation">
-            Yay! I can’t wait for our date ❤️
+            DIDA KITA HAHAHAHA SIRING PA "YES" IMO BATUNON. I'll send sa messenger about the plan, I love you! ❤️
         </div>
     </div>
 
@@ -139,10 +138,9 @@
         function createHeart() {
             const heart = document.createElement("div");
             heart.className = "heart-bg";
-            heart.innerText = "❤️";
+            heart.textContent = "❤️";
             heart.style.left = Math.random() * 100 + "%";
             document.getElementById("hearts-bg").appendChild(heart);
-
             setTimeout(() => heart.remove(), 6000);
         }
         setInterval(createHeart, 500);
